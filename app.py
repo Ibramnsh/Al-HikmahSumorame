@@ -5,7 +5,7 @@ from datetime import datetime
 import os
 
 app = Flask(__name__)
-app.secret_key = 'masjid-Sumorame-Sidoarjo'
+app.secret_key = os.environ.get('SECRET_KEY', 'masjid-Sumorame-Sidoarjo-default-key')
 
 # Database inisiasi
 def init_db():
@@ -35,7 +35,7 @@ def init_db():
         hashed_password = generate_password_hash('adminsumorame*')
         c.execute("INSERT INTO admin (username, password) VALUES (?, ?)", ('admin', hashed_password))
     
-    # isi kajian
+    # isi kajian (hanya jika tabel kosong)
     c.execute("SELECT COUNT(*) FROM kajian")
     if c.fetchone()[0] == 0:
         sample_kajian = [
@@ -198,6 +198,4 @@ def kajian_public():
     
     return render_template('kajian_public.html', kajian_list=kajian_list, search_query=search_query)
 
-if __name__ == '__main__':
-    init_db()
-    app.run(debug=True)
+# Bagian if __name__ == '__main__' telah dihapus
