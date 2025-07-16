@@ -1,0 +1,420 @@
+/* style.css */
+:root {
+  --primary-color: #1e40af;
+  --primary-dark: #1e3a8a;
+  --primary-light: #3b82f6;
+  --secondary-color: #64748b;
+  --accent-color: #f59e0b;
+  --success-color: #10b981;
+  --error-color: #ef4444;
+  --warning-color: #f59e0b;
+  --light-bg: #f8fafc;
+  --white: #ffffff;
+  --dark-text: #1e293b;
+  --muted-text: #64748b;
+  --border-color: #e2e8f0;
+
+  /* New additions for better typography and spacing */
+  --font-family-sans-serif: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-sm: 0.875rem;
+  --line-height-base: 1.6;
+  --border-radius: 0.5rem; /* Standardized border radius */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.07),
+    0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-sans-serif);
+  line-height: var(--line-height-base);
+  color: var(--dark-text);
+  background-color: var(--light-bg); /* Use a light background for the body */
+  padding-top: 76px;
+  overflow-x: hidden;
+}
+
+/* Section Padding */
+.section-padding {
+  padding: 4rem 0;
+}
+
+/* Custom Bootstrap Colors & Components */
+.btn {
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+/* Navbar Styling */
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 60%;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    var(--primary-light) 0%,
+    var(--primary-dark) 100%
+  );
+  color: var(--white);
+  padding: 15px 0;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="p" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23p)"/></svg>');
+  opacity: 0.2;
+  transform: scale(1.5);
+}
+
+.hero-section .display-4 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.hero-section .lead {
+  font-size: 1.25rem;
+}
+
+.mosque-image {
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+}
+
+.mosque-image:hover {
+  transform: scale(1.03) rotate(1deg);
+  box-shadow: 0 30px 40px -10px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-title {
+  font-weight: 700;
+  color: var(--dark-text);
+}
+
+/* Feature & Facility Icons/Cards */
+.feature-icon,
+.facility-icon {
+  width: 200px; /* Diubah dari 80px */
+  height: 200px; /* Diubah dari 80px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  padding: 12px; /* Sedikit disesuaikan untuk proporsi yang lebih baik */
+  box-shadow: var(--shadow-sm);
+}
+
+/* Tambahkan style untuk gambar di dalamnya */
+.facility-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+  border-radius: 50%; /* Membuat gambar itu sendiri juga lingkaran */
+}
+
+.facility-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Tambahkan transisi pada elemen teks agar perubahan ukuran font lebih halus */
+.facility-card h5,
+.facility-card p {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style untuk kartu yang sedang aktif/dipilih */
+.facility-card.active {
+  transform: translateY(-5px); /* Angkat kartu sedikit ke atas */
+  border: 2px solid var(--primary-light); /* Tambahkan border sebagai penanda */
+}
+
+/* Perbesar ikon/gambar ketika kartu aktif */
+.facility-card.active .facility-icon {
+  transform: scale(1.15); /* Perbesar ikon sebesar 15% */
+  box-shadow: var(--shadow-md);
+}
+
+/* Perbesar judul ketika kartu aktif */
+.facility-card.active h5 {
+  font-size: 1.3rem; /* Perbesar ukuran font judul */
+  color: var(--primary-color); /* Ubah warna judul agar lebih menonjol */
+}
+
+/* Perbesar teks deskripsi ketika kartu aktif */
+.facility-card.active .text-muted {
+  font-size: 0.95rem; /* Sedikit perbesar font deskripsi */
+}
+
+.facility-card:hover .facility-icon {
+  background-color: var(--white);
+}
+
+.facility-card:hover .facility-icon {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
+.facility-card:hover .text-muted {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Info Cards & Schedule */
+.info-card {
+  background: var(--white);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--border-radius);
+}
+
+.schedule-item {
+  padding: 1rem;
+  background: var(--light-bg);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-light);
+  transition: all 0.3s ease;
+  margin-bottom: 0.75rem;
+}
+
+.schedule-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+  border-left-color: var(--primary-color);
+}
+
+/* Form Styling */
+.form-control,
+.form-select {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1.25rem;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(30, 64, 175, 0.2);
+}
+
+.input-group-text {
+  background-color: var(--primary-color);
+  color: white;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+/* Delete Modal */
+.modal-content {
+  border-radius: 1rem;
+  border: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.delete-icon {
+  width: 90px;
+  height: 90px;
+  background: #fef2f2;
+  color: var(--error-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto 1.5rem;
+}
+
+.btn-danger {
+  background-color: var(--error-color);
+  border-color: var(--error-color);
+}
+
+.btn-danger:hover {
+  background-color: #c81e1e;
+  border-color: #c81e1e;
+}
+
+/* Kajian Details */
+.kajian-details p {
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.kajian-details .fas {
+  width: 20px;
+  text-align: center;
+}
+
+/* Responsive Design */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 575.98px) {
+  body {
+    padding-top: 70px;
+  }
+  .hero-section {
+    padding: 60px 0;
+    text-align: center;
+    min-height: auto;
+  }
+  .hero-section .display-4 {
+    font-size: 2.2rem;
+  }
+  .mosque-image {
+    margin-top: 2rem;
+    max-height: 250px;
+  }
+  .section-padding {
+    padding: 2.5rem 0;
+  }
+  .display-5 {
+    font-size: 2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 767.98px) {
+  .hero-section .text-center {
+    text-align: center !important;
+  }
+  .mosque-image {
+    margin-top: 3rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-top: 0.5rem;
+    box-shadow: var(--shadow-md);
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card,
+.form-control,
+.btn {
+  animation: fadeInUp 0.5s ease-out forwards;
+}

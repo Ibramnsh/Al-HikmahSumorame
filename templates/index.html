@@ -1,0 +1,334 @@
+{% extends "base.html" %} {% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-gradient-primary text-white">
+  <div class="container">
+    <div class="row align-items-center min-vh-100 pt-5">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold mb-4">
+          Selamat Datang di Masjid Al-Hikmah
+        </h1>
+        <p class="lead mb-4">
+          Langkah kecil menuju masjid, adalah langkah besar menuju ridha Allah
+        </p>
+        <div class="d-flex gap-3">
+          <a href="{{ url_for('kajian_public') }}" class="btn btn-light btn-lg">
+            <i class="fas fa-book-open me-2"></i>Lihat Kajian
+          </a>
+          <a href="#tentang" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-info-circle me-2"></i>Tentang Kami
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img
+          src="static/masjid.jpg"
+          alt="Masjid X"
+          class="img-fluid rounded-3 shadow-lg mosque-image"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="tentang" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center mb-5">
+        <h2 class="display-5 fw-bold text-primary mb-4">
+          Tentang Masjid Al-Hikmah
+        </h2>
+        <p class="lead text-muted">
+          Masjid Al-Hikmah hadir sebagai pelita dalam membimbing umat menuju
+          ridha Allah
+        </p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center p-4">
+            <div
+              class="feature-icon bg-primary text-white rounded-circle mx-auto mb-3"
+            >
+              <i class="fas fa-eye fa-2x"></i>
+            </div>
+            <h5 class="card-title fw-bold">Visi</h5>
+            <p class="card-text">
+              Menjadi pusat dakwah dan kajian Islam harian yang aktif, serta
+              pelopor pelayanan sosial kemasyarakatan yang berlandaskan
+              nilai-nilai Islam rahmatan lil ‘alamin.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center p-4">
+            <div
+              class="feature-icon bg-primary text-white rounded-circle mx-auto mb-3"
+            >
+              <i class="fas fa-bullseye fa-2x"></i>
+            </div>
+            <h5 class="card-title fw-bold">Misi</h5>
+            <p class="card-text">
+              <li>
+                Menyelenggarakan kajian Islam setiap hari untuk memperkuat
+                akidah, ibadah, dan akhlak umat.
+              </li>
+              <li>
+                Mengembangkan dakwah yang inklusif, menyentuh berbagai lapisan
+                masyarakat dengan pendekatan yang hikmah dan penuh kasih.
+              </li>
+              <li>
+                Menyediakan layanan ambulans dan bantuan sosial sebagai wujud
+                kepedulian dan pelayanan terhadap masyarakat sekitar.
+              </li>
+              <li>
+                Membangun sinergi dengan tokoh, lembaga, dan komunitas dalam
+                menyebarkan nilai-nilai kebaikan dan persatuan.
+              </li>
+              <li>
+                Menjadikan masjid sebagai tempat yang nyaman, terbuka, dan
+                dinamis bagi kegiatan ibadah, edukasi, dan sosial.
+              </li>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center p-4">
+            <div
+              class="feature-icon bg-primary text-white rounded-circle mx-auto mb-"
+            >
+              <i class="fas fa-heart fa-2x"></i>
+            </div>
+            <h5 class="card-title fw-bold">Nilai</h5>
+            <p class="card-text">
+              <li>
+                Menghidupkan nilai ibadah, ukhuwah, dan pelayanan sebagai cermin
+                cinta kepada Allah dan sesama manusia.
+              </li>
+              <li>
+                Menjunjung tinggi nilai keimanan, keilmuan, dan kepedulian
+                sosial dalam setiap aktivitas masjid.
+              </li>
+              <li>
+                Mewujudkan masyarakat yang berakhlak mulia, toleran, dan saling
+                menolong dalam kebaikan.
+              </li>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Facilities Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold text-primary mb-4">Fasilitas Masjid</h2>
+      <p class="lead text-muted">
+        Fasilitas lengkap untuk kenyamanan ibadah dan aktivitas keagamaan
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="facility-card text-center">
+          <div class="facility-icon">
+            <img src="../static/wudhu.jpg" alt="Ikon Tempat Wudhu" />
+          </div>
+          <h5 class="fw-bold">Tempat Wudhu</h5>
+          <p class="text-muted">
+            Tempat wudhu yang bersih dan nyaman dengan air mengalir 24 jam
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="facility-card text-center">
+          <div class="facility-icon">
+            <img src="../static/Area parkir.jpg" alt="Ikon Area Parkir" />
+          </div>
+          <h5 class="fw-bold">Area Parkir</h5>
+          <p class="text-muted">
+            Area parkir luas untuk mobil dan motor dengan keamanan terjamin
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="facility-card text-center">
+          <div class="facility-icon">
+            <img src="../static/ambulanc.jpg" alt="Ikon Ambulan" />
+          </div>
+          <h5 class="fw-bold">Ambulan</h5>
+          <p class="text-muted">
+            Layanan ambulan siaga untuk keperluan darurat jamaah
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="facility-card text-center">
+          <div class="facility-icon">
+            <img src="../static/perpustakaan.jpg" alt="Ikon Perpustakaan" />
+          </div>
+          <h5 class="fw-bold">Ruang Baca</h5>
+          <p class="text-muted">
+            Perpustakaan islami dengan koleksi buku agama yang lengkap
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="facility-card text-center">
+          <div class="facility-icon">
+            <img src="../static/ruang kajian.jpg" alt="Ikon Ruang Kajian" />
+          </div>
+          <h5 class="fw-bold">Ruang Kajian</h5>
+          <p class="text-muted">
+            Ruang kajian ber-AC dengan kapasitas 100 orang
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="facility-card text-center">
+          <div class="facility-icon">
+            <img src="../static/dapur.jpg" alt="Ikon Dapur" />
+          </div>
+          <h5 class="fw-bold">Dapur</h5>
+          <p class="text-muted">
+            Dapur lengkap untuk persiapan acara dan kegiatan sosial
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="facility-card text-center">
+          <div class="facility-icon">
+            <img src="../static/toilet.jpg" alt="Ikon Toilet" />
+          </div>
+          <h5 class="fw-bold">Toilet</h5>
+          <p class="text-muted">Toilet bersih terpisah untuk pria dan wanita</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="facility-card text-center">
+          <div class="facility-icon">
+            <img src="../static/wifi.jpg" alt="Ikon wifi" />
+          </div>
+          <h5 class="fw-bold">Wifi</h5>
+          <p class="text-muted">Wifi untuk menunjang kegiatan di masjid</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Information Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="info-card h-100">
+          <h3 class="fw-bold text-primary mb-4">
+            <i class="fas fa-map-marker-alt me-2"></i>Alamat & Kontak
+          </h3>
+          <p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=GP44%2B9J5%2C%20Sumorame%2C%20Sidoarjo"
+              target="_blank"
+              class="text-dark"
+              style="text-decoration: none"
+            >
+              GP44+9J5, Jl. Raya Desa Sumorame, Kerawean, Sumorame, Kec. Candi,
+              Kabupaten Sidoarjo, Jawa Timur 61271
+            </a>
+          </p>
+          <div class="contact-info mb-4">
+            <p class="mb-2">
+              <i class="fas fa-phone me-2 text-primary"></i>+62 813-3050-4756
+            </p>
+            <p class="mb-0">
+              <i class="fas fa-envelope me-2 text-primary"></i
+              >al.hikmah.sumorame1@gmail.com
+            </p>
+          </div>
+
+          <div
+            class="map-container"
+            style="
+              border-radius: 15px;
+              overflow: hidden;
+              border: 1px solid #e2e8f0;
+            "
+          >
+            <iframe
+              src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.7384317924916!2d112.70402071084816!3d-7.4941049924869345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e0b6e384c2e1%3A0x84e02c7baf10410d!2sMasjid%20Al-Hikmah!5e0!3m2!1sen!2sid!4v1751547938544!5m2!1sen!2sid"
+              width="100%"
+              height="250"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="info-card h-100">
+          <h3 class="fw-bold text-primary mb-4">
+            <i class="fas fa-clock me-2"></i>Jam Operasional
+          </h3>
+          <div class="schedule-list">
+            <div class="schedule-item mb-3">
+              <strong>Shalat Subuh:</strong> 04:30 - 06:00 WIB
+            </div>
+            <div class="schedule-item mb-3">
+              <strong>Shalat Dzuhur:</strong> 12:00 - 13:30 WIB
+            </div>
+            <div class="schedule-item mb-3">
+              <strong>Shalat Ashar:</strong> 15:30 - 17:00 WIB
+            </div>
+            <div class="schedule-item mb-3">
+              <strong>Shalat Maghrib:</strong> 18:00 - 18:30 WIB
+            </div>
+            <div class="schedule-item mb-3">
+              <strong>Shalat Isya:</strong> 19:30 - 21:00 WIB
+            </div>
+            <div class="schedule-item">
+              <strong>Kajian Rutin:</strong> Setiap hari setelah Maghrib
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  // Pastikan DOM sudah dimuat sepenuhnya sebelum menjalankan script
+  document.addEventListener("DOMContentLoaded", function () {
+    // Ambil semua elemen dengan kelas .facility-card
+    const facilityCards = document.querySelectorAll(".facility-card");
+
+    // Tambahkan event listener untuk setiap kartu
+    facilityCards.forEach((card) => {
+      card.addEventListener("click", function () {
+        // Cek apakah kartu yang diklik sudah aktif
+        const isAlreadyActive = this.classList.contains("active");
+
+        // Hapus kelas 'active' dari semua kartu terlebih dahulu
+        facilityCards.forEach((c) => {
+          c.classList.remove("active");
+        });
+
+        // Jika kartu yang diklik belum aktif, maka aktifkan
+        // Jika sudah aktif, toggle akan menghapusnya (membuatnya tidak aktif)
+        if (!isAlreadyActive) {
+          this.classList.add("active");
+        }
+      });
+    });
+  });
+</script>
+{% endblock %}
